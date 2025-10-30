@@ -6,7 +6,7 @@ Per-tab isolation + single “Download Results” ZIP with updated CSV containin
 Handles various CSV encodings
 """
 import csv, os, time, random, streamlit as st, zipfile, io
-from ddgs import DDGS
+from duckduckgo_search import DDGS
 from charset_normalizer import detect
 
 # ---------- helpers -------------------------------------------------------
@@ -131,3 +131,4 @@ if st.session_state[sess("zip_ready")]:
                        mime="application/zip")
     if st.button("Find New Image Links", type="secondary"):
         reset_app()
+
